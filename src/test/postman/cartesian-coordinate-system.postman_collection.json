@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "e561e323-818a-4300-8cc7-61c1a03a70d0",
+		"name": "cartesian-coordinate-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "check the  line using two points",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/line-by-two-points/3/2/2/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"line-by-two-points",
+						"3",
+						"2",
+						"2",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Y-intercept cordinate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/y-intercept/5/2/2/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"y-intercept",
+						"5",
+						"2",
+						"2",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check the  two lines are parallel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"line1\": {\r\n        \"start\": {\r\n            \"x\": \"2\",\r\n            \"y\": \"2\"\r\n        },\r\n        \"end\": {\r\n            \"x\": \"2\",\r\n            \"y\": \"8\"\r\n        }\r\n    },\r\n     \"line2\": {\r\n        \"start\": {\r\n            \"x\": \"3\",\r\n            \"y\": \"3\"\r\n        },\r\n        \"end\": {\r\n            \"x\": \"3\",\r\n            \"y\": \"3\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/parallel",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"parallel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check the  two lines are perpendicular",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"line1\": {\r\n        \"start\": {\r\n            \"x\": \"1\",\r\n            \"y\": \"2\"\r\n        },\r\n        \"end\": {\r\n            \"x\": \"1\",\r\n            \"y\": \"8\"\r\n        }\r\n    },\r\n     \"line2\": {\r\n        \"start\": {\r\n            \"x\": \"0\",\r\n            \"y\": \"1\"\r\n        },\r\n        \"end\": {\r\n            \"x\": \"8\",\r\n            \"y\": \"1\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/perpendicular",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"perpendicular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get line incident point",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"line1\": {\r\n        \"start\": {\r\n            \"x\": \"1\",\r\n            \"y\": \"1\"\r\n        },\r\n        \"end\": {\r\n            \"x\": \"4\",\r\n            \"y\": \"4\"\r\n        }\r\n    },\r\n     \"line2\": {\r\n        \"start\": {\r\n            \"x\": \"1\",\r\n            \"y\": \"8\"\r\n        },\r\n        \"end\": {\r\n            \"x\": \"5\",\r\n            \"y\": \"0\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/line-incident-point",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"line-incident-point"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
